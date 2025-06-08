@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ask AI</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background-color: #f4f6f8; margin: 0; display: flex; flex-direction: column; height: 100vh; }
+    header, footer { background-color: #1f2937; color: white; padding: 15px 20px; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    .chat-container { flex: 1; padding: 30px; max-width: 800px; margin: auto; display: flex; flex-direction: column; }
+    .chat-box { flex: 1; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow-y: auto; margin-bottom: 20px; }
+    .input-box { display: flex; }
+    input { flex: 1; padding: 12px; font-size: 16px; border: 1px solid #ccc; border-radius: 8px 0 0 8px; }
+    button { padding: 12px 20px; font-size: 16px; border: none; background-color: #2563eb; color: white; border-radius: 0 8px 8px 0; cursor: pointer; }
+    .user-message { background: #d1ecf1; padding: 8px; border-radius: 5px; margin: 5px 0; text-align: right; font-weight: bold; }
+    .bot-message { background: #f1f1f1; padding: 8px; border-radius: 5px; margin: 5px 0; text-align: left; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FinVisionAI</h1>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="insights.html">Insights</a>
+      <a href="chatbot.html">Ask AI</a>
+    </nav>
+  </header>
+
+  <div class="chat-container">
+    <h3 style="text-align:center;">FinVision Chatbot</h3>
+    <div class="chat-box" id="chatbot-messages"></div>
+    <div class="input-box">
+      <input type="text" id="chatbot-input" placeholder="Type your question..." onkeypress="handleKeyPress(event)" />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 FinVisionAI. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const sessionId = "user-session-001";
+
+    window.onload = async function () {
+      const response = await fetch("http://127.0.0.1:5000/welcome");
+      const data = await response.json();
+
+      const messages = document.getElementById("chatbot-messages");
+      const welcomeMessage = document.createElement("div");
+      welcomeMessage.textContent = "Bot: " + data.response;
+      welcomeMessage.className = "bot-message";
+      messages.appendChild(welcomeMessage);
+    };
+
+    function handleKeyPress(event) {
+      if (event.key === "Enter") {
+        sendMessage();
+      }
+    }
+
+    async function sendMessage() {
+      const input = document.getElementById("chatbot-input");
+      const messages = document.getElementById("chatbot-messages");
+
+      const userText = input.value.trim();
+      if (userText === "") return;
+
+      const userMessage = document.createElement("div");
+      userMessage.textContent = "You: " + userText;
+      userMessage.className = "user-message";
+      messages.appendChild(userMessage);
+
+      try {
+        const response = await fetch("http://127.0.0.1:5000/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message: userText, session_id: sessionId })
+        });
+
+        const data = await response.json();
+        const botMessage = document.createElement("div");
+        botMessage.className = "bot-message";
+
+        if (data.response.includes("<")) {
+          botMessage.innerHTML = "Bot: " + data.response;
+        } else {
+          botMessage.textContent = "Bot: " + (data.response || "Sorry, I couldn't process your request.");
+        }
+
+        messages.appendChild(botMessage);
+      } catch (error) {
+        const errorMessage = document.createElement("div");
+        errorMessage.textContent = "Bot: Sorry, something went wrong.";
+        errorMessage.className = "bot-message";
+        messages.appendChild(errorMessage);
+      }
+
+      input.value = "";
+      messages.scrollTop = messages.scrollHeight;
+    }
+  </script>
+</body>
+</html>

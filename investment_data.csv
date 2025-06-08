@@ -1,0 +1,121 @@
+risk_level,amount,duration_months,goal,product_name
+low,16434,47,savings,Government Bonds
+moderate,65667,36,savings,Corporate Bonds
+moderate,66166,11,retirement,Corporate Bonds
+high,70406,21,retirement,Cryptocurrency
+moderate,84124,41,education,Corporate Bonds
+moderate,77752,59,wealth_growth,Corporate Bonds
+moderate,76992,54,education,Index Funds
+low,98272,6,travel,Large Cap Funds
+moderate,92897,53,wealth_growth,Balanced Mutual Funds
+high,11291,49,savings,Equity Stocks
+high,95411,43,education,Cryptocurrency
+high,41863,32,wealth_growth,Sectoral Funds
+moderate,75593,52,savings,Index Funds
+high,71518,24,education,Sectoral Funds
+low,20933,51,travel,Large Cap Funds
+low,37459,42,wealth_growth,Large Cap Funds
+high,76925,10,wealth_growth,Equity Stocks
+high,28316,38,retirement,Cryptocurrency
+high,20825,23,wealth_growth,Sectoral Funds
+low,56765,60,child_plan,Fixed Deposit
+moderate,64514,20,savings,Index Funds
+high,32906,52,savings,Equity Stocks
+high,10603,47,travel,Equity Stocks
+low,89875,25,savings,Large Cap Funds
+moderate,7490,10,travel,Balanced Mutual Funds
+low,67925,17,travel,Fixed Deposit
+moderate,18355,36,retirement,Balanced Mutual Funds
+low,29804,17,wealth_growth,Large Cap Funds
+moderate,52635,40,child_plan,Balanced Mutual Funds
+moderate,68706,31,retirement,Balanced Mutual Funds
+low,47652,22,wealth_growth,Large Cap Funds
+low,98167,44,savings,Government Bonds
+moderate,58767,53,child_plan,Balanced Mutual Funds
+moderate,16048,53,retirement,Index Funds
+low,99501,12,retirement,Large Cap Funds
+low,58177,42,education,Large Cap Funds
+low,80837,48,savings,Fixed Deposit
+low,36778,24,child_plan,Large Cap Funds
+high,17853,6,child_plan,Equity Stocks
+high,82734,56,savings,Sectoral Funds
+low,15209,46,retirement,Large Cap Funds
+low,77011,32,savings,Fixed Deposit
+high,58371,50,child_plan,Equity Stocks
+high,85429,49,travel,Sectoral Funds
+moderate,36527,47,travel,Corporate Bonds
+high,12852,57,education,Cryptocurrency
+moderate,93288,14,savings,Corporate Bonds
+moderate,39066,47,child_plan,Balanced Mutual Funds
+high,92846,42,travel,Equity Stocks
+low,21810,6,wealth_growth,Fixed Deposit
+high,12815,17,child_plan,Cryptocurrency
+moderate,74813,12,wealth_growth,Corporate Bonds
+low,5954,23,retirement,Government Bonds
+low,69847,33,child_plan,Large Cap Funds
+low,64016,52,retirement,Large Cap Funds
+high,67786,52,retirement,Equity Stocks
+moderate,48577,54,retirement,Balanced Mutual Funds
+moderate,40038,57,education,Index Funds
+high,53152,56,wealth_growth,Equity Stocks
+moderate,66703,20,wealth_growth,Balanced Mutual Funds
+low,52205,22,retirement,Large Cap Funds
+low,13732,39,education,Government Bonds
+moderate,75432,41,savings,Balanced Mutual Funds
+moderate,19054,57,retirement,Corporate Bonds
+high,54705,45,education,Cryptocurrency
+high,49212,52,wealth_growth,Sectoral Funds
+high,47109,28,savings,Equity Stocks
+high,92424,29,child_plan,Cryptocurrency
+moderate,43055,18,child_plan,Balanced Mutual Funds
+high,42245,30,savings,Cryptocurrency
+moderate,23073,15,child_plan,Corporate Bonds
+moderate,27548,9,wealth_growth,Balanced Mutual Funds
+moderate,89154,20,education,Corporate Bonds
+high,18357,30,retirement,Equity Stocks
+low,63797,51,travel,Government Bonds
+high,84278,46,savings,Cryptocurrency
+moderate,11164,41,travel,Index Funds
+high,46882,18,education,Sectoral Funds
+high,45478,53,savings,Cryptocurrency
+high,88488,23,education,Sectoral Funds
+high,47844,18,retirement,Cryptocurrency
+high,76331,45,child_plan,Cryptocurrency
+high,73856,55,child_plan,Sectoral Funds
+high,16760,13,education,Equity Stocks
+low,9642,54,child_plan,Fixed Deposit
+high,5177,50,wealth_growth,Sectoral Funds
+moderate,5744,56,retirement,Balanced Mutual Funds
+moderate,81598,39,travel,Index Funds
+high,96772,35,wealth_growth,Sectoral Funds
+moderate,17962,32,child_plan,Corporate Bonds
+low,84218,52,travel,Government Bonds
+low,70934,50,retirement,Government Bonds
+moderate,52812,19,travel,Balanced Mutual Funds
+high,47464,20,savings,Cryptocurrency
+moderate,63662,54,child_plan,Index Funds
+low,11069,10,child_plan,Government Bonds
+high,93597,52,retirement,Cryptocurrency
+high,77803,13,education,Sectoral Funds
+high,71182,51,travel,Equity Stocks
+high,68835,24,savings,Cryptocurrency
+moderate,39536,6,travel,Corporate Bonds
+moderate,43688,36,child_plan,Corporate Bonds
+low,61174,56,child_plan,Large Cap Funds
+high,52435,24,wealth_growth,Equity Stocks
+high,98669,42,retirement,Sectoral Funds
+low,94990,47,travel,Fixed Deposit
+moderate,28828,12,wealth_growth,Index Funds
+high,39090,9,retirement,Sectoral Funds
+low,9275,35,retirement,Fixed Deposit
+low,6847,23,education,Government Bonds
+low,63029,25,travel,Large Cap Funds
+low,61911,44,savings,Fixed Deposit
+low,46280,13,wealth_growth,Fixed Deposit
+moderate,9393,54,savings,Balanced Mutual Funds
+high,48060,36,travel,Equity Stocks
+high,18057,60,retirement,Sectoral Funds
+low,7315,11,retirement,Government Bonds
+high,35014,6,education,Cryptocurrency
+high,87829,12,wealth_growth,Cryptocurrency
+moderate,93681,19,child_plan,Index Funds

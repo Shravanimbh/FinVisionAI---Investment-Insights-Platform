@@ -1,0 +1,11 @@
+Stock,Sector,Amount,Volatility,Return,RiskLevel
+TCS,Tech,10000,0.2,8.5,Low
+Adani,Infra,15000,0.7,12.3,High
+SBI,Banking,8000,0.3,6.1,Medium
+Reliance,Energy,12000,0.4,7.2,Medium
+Infosys,Tech,11000,0.25,9.0,Low
+HDFC,Banking,9500,0.35,6.8,Medium
+NTPC,Energy,7000,0.6,5.5,High
+Wipro,Tech,10500,0.22,8.1,Low
+ICICI,Banking,11500,0.45,7.0,Medium
+PowerGrid,Infra,9000,0.65,4.9,High

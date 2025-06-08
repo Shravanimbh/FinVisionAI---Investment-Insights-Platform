@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - FinvisionAI</title>
+    <style>
+        body {
+    background: url('stock_image.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+    padding-left: 200px; /* Adjusted left padding */
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    margin-left: 0px; /* Removed left shift */
+    position: relative;
+}
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: white;
+            font-size: 22px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            color: black;
+            font-size: 16px;
+        }
+        input::placeholder {
+            color: rgba(0, 0, 0, 0.6);
+        }
+        .password-checklist {
+            text-align: left;
+            width: 100%;
+            font-size: 14px;
+        }
+        .password-checklist p {
+            margin: 2px 0;
+            color: white;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #333;
+        }
+        .hidden {
+            display: none;
+        }
+        #error-message, #signup-error-message {
+            color: red;
+            text-align: center;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+        .switch-link {
+            margin-top: 10px;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+        }
+        .switch-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="signup-box">
+        <img src="logo.webp" alt="Logo" class="logo">  <!-- Logo above the sign-up form -->
+        <h2>Sign Up</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password" onkeyup="validatePassword()">
+        <div class="password-checklist">
+            <p id="length">⬜ 8+ Characters</p>
+            <p id="uppercase">⬜ 1 Uppercase Letter</p>
+            <p id="lowercase">⬜ 1 Lowercase Letter</p>
+            <p id="number">⬜ 1 Number</p>
+            <p id="special">⬜ 1 Special Character</p>
+        </div>
+        <button onclick="submitSignup()">Sign Up</button>
+        <p class="switch-link" onclick="showLogin()">Already have an account? Log in</p>
+        <p id="signup-error-message"></p>
+    </div>
+    
+    <div class="container hidden" id="login-box">
+        <img src="logo.webp" alt="Logo" class="logo">  <!-- Logo above the login form -->
+        <h2>Log In</h2>
+        <input type="text" id="login-username" placeholder="Username">
+        <input type="password" id="login-password" placeholder="Password">
+        <button onclick="validateLogin()">Login</button>
+        <p id="error-message"></p>
+    </div>
+
+    <script>
+        function validatePassword() {
+            let password = document.getElementById("password").value;
+            document.getElementById("length").innerHTML = (password.length >= 8) ? "✅ 8+ Characters" : "⬜ 8+ Characters";
+            document.getElementById("uppercase").innerHTML = (/[A-Z]/.test(password)) ? "✅ 1 Uppercase Letter" : "⬜ 1 Uppercase Letter";
+            document.getElementById("lowercase").innerHTML = (/[a-z]/.test(password)) ? "✅ 1 Lowercase Letter" : "⬜ 1 Lowercase Letter";
+            document.getElementById("number").innerHTML = (/\d/.test(password)) ? "✅ 1 Number" : "⬜ 1 Number";
+            document.getElementById("special").innerHTML = (/[!@#$%^&*]/.test(password)) ? "✅ 1 Special Character" : "⬜ 1 Special Character";
+        }
+        function isValidPassword(password) {
+            return password.length >= 8 &&
+                   /[A-Z]/.test(password) &&
+                   /[a-z]/.test(password) &&
+                   /\d/.test(password) &&
+                   /[!@#$%^&*]/.test(password);
+        }
+        function submitSignup() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let errorMsg = document.getElementById("signup-error-message");
+            if (username === "" || password === "") {
+                errorMsg.innerText = "⚠️ Please fill in all details!";
+                return;
+            }
+            if (isValidPassword(password)) {
+                alert("Signup Successful! Redirecting to Login...");
+                showLogin();
+                errorMsg.innerText = "";
+            } else {
+                errorMsg.innerText = "⚠️ Password does not meet the requirements!";
+            }
+        }
+        function validateLogin() {
+            let username = document.getElementById("login-username").value;
+            let password = document.getElementById("login-password").value;
+            let errorMsg = document.getElementById("error-message");
+            if (username === "" || password === "") {
+                errorMsg.innerText = "⚠️ Please fill in all details!";
+                return;
+            }
+            if (isValidPassword(password)) {
+        window.location.href = "Dashboard.html"; // Redirect to Dashboard
+    } else {
+        errorMsg.innerText = "⚠️ Incorrect username or password!";
+    }
+}
+        function showLogin() {
+            document.getElementById("signup-box").classList.add("hidden");
+            document.getElementById("login-box").classList.remove("hidden");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,404 @@
+2025-04-08 14:23:58,947 - CRITICAL - Missing GROQ_API_KEY in environment.
+2025-04-08 14:26:06,745 - INFO - LLM initialized successfully.
+2025-04-08 14:26:06,787 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.4.37:5000
+2025-04-08 14:26:06,788 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-08 14:27:32,539 - INFO - 127.0.0.1 - - [08/Apr/2025 14:27:32] "GET /welcome HTTP/1.1" 200 -
+2025-04-08 14:27:37,930 - INFO - 127.0.0.1 - - [08/Apr/2025 14:27:37] "OPTIONS /chat HTTP/1.1" 200 -
+2025-04-08 14:27:38,969 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-08 14:27:40,098 - INFO - 127.0.0.1 - - [08/Apr/2025 14:27:40] "POST /chat HTTP/1.1" 200 -
+2025-04-08 14:27:53,125 - INFO - 127.0.0.1 - - [08/Apr/2025 14:27:53] "OPTIONS /chat HTTP/1.1" 200 -
+2025-04-08 14:27:53,984 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-08 14:27:54,010 - INFO - 127.0.0.1 - - [08/Apr/2025 14:27:54] "POST /chat HTTP/1.1" 200 -
+2025-04-08 14:28:42,057 - INFO - 127.0.0.1 - - [08/Apr/2025 14:28:42] "OPTIONS /chat HTTP/1.1" 200 -
+2025-04-08 14:28:42,784 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-08 14:28:42,793 - INFO - 127.0.0.1 - - [08/Apr/2025 14:28:42] "POST /chat HTTP/1.1" 200 -
+2025-04-08 14:32:10,544 - INFO - 127.0.0.1 - - [08/Apr/2025 14:32:10] "[33mOPTIONS /api/predict-risk HTTP/1.1[0m" 404 -
+2025-04-08 14:32:10,548 - INFO - 127.0.0.1 - - [08/Apr/2025 14:32:10] "[33mOPTIONS /api/get-risk-data HTTP/1.1[0m" 404 -
+2025-04-08 14:32:26,691 - INFO - 127.0.0.1 - - [08/Apr/2025 14:32:26] "[33mOPTIONS /api/predict-risk HTTP/1.1[0m" 404 -
+2025-04-08 14:32:27,015 - INFO - 127.0.0.1 - - [08/Apr/2025 14:32:27] "[33mOPTIONS /api/get-risk-data HTTP/1.1[0m" 404 -
+2025-04-08 14:33:41,587 - INFO - 127.0.0.1 - - [08/Apr/2025 14:33:41] "[33mOPTIONS /api/predict-risk HTTP/1.1[0m" 404 -
+2025-04-08 14:33:41,590 - INFO - 127.0.0.1 - - [08/Apr/2025 14:33:41] "[33mOPTIONS /api/get-risk-data HTTP/1.1[0m" 404 -
+2025-04-08 14:33:42,631 - INFO - 127.0.0.1 - - [08/Apr/2025 14:33:42] "[33mOPTIONS /api/predict-risk HTTP/1.1[0m" 404 -
+2025-04-08 14:33:42,945 - INFO - 127.0.0.1 - - [08/Apr/2025 14:33:42] "[33mOPTIONS /api/get-risk-data HTTP/1.1[0m" 404 -
+2025-04-08 14:34:37,455 - INFO - 127.0.0.1 - - [08/Apr/2025 14:34:37] "[33mOPTIONS /api/predict-risk HTTP/1.1[0m" 404 -
+2025-04-08 14:34:37,485 - INFO - 127.0.0.1 - - [08/Apr/2025 14:34:37] "[33mOPTIONS /api/get-risk-data HTTP/1.1[0m" 404 -
+2025-04-08 14:34:45,435 - INFO - 127.0.0.1 - - [08/Apr/2025 14:34:45] "[33mOPTIONS /api/predict-risk HTTP/1.1[0m" 404 -
+2025-04-08 14:34:45,757 - INFO - 127.0.0.1 - - [08/Apr/2025 14:34:45] "[33mOPTIONS /api/get-risk-data HTTP/1.1[0m" 404 -
+2025-04-09 10:34:42,999 - INFO - LLM initialized successfully.
+2025-04-09 10:34:43,037 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.4.37:5000
+2025-04-09 10:34:43,037 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-09 10:34:46,918 - INFO - 127.0.0.1 - - [09/Apr/2025 10:34:46] "GET /welcome HTTP/1.1" 200 -
+2025-04-09 10:35:03,024 - INFO - 127.0.0.1 - - [09/Apr/2025 10:35:03] "OPTIONS /chat HTTP/1.1" 200 -
+2025-04-09 10:35:04,093 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-09 10:35:04,118 - INFO - 127.0.0.1 - - [09/Apr/2025 10:35:04] "POST /chat HTTP/1.1" 200 -
+2025-04-09 10:36:26,352 - INFO - 127.0.0.1 - - [09/Apr/2025 10:36:26] "OPTIONS /chat HTTP/1.1" 200 -
+2025-04-09 10:36:27,228 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-09 10:36:27,245 - INFO - 127.0.0.1 - - [09/Apr/2025 10:36:27] "POST /chat HTTP/1.1" 200 -
+2025-04-09 10:37:14,555 - INFO - 127.0.0.1 - - [09/Apr/2025 10:37:14] "OPTIONS /chat HTTP/1.1" 200 -
+2025-04-09 10:37:15,335 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-09 10:37:15,341 - INFO - 127.0.0.1 - - [09/Apr/2025 10:37:15] "POST /chat HTTP/1.1" 200 -
+2025-04-09 10:37:45,709 - INFO - 127.0.0.1 - - [09/Apr/2025 10:37:45] "OPTIONS /chat HTTP/1.1" 200 -
+2025-04-09 10:37:46,264 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-09 10:37:46,273 - INFO - 127.0.0.1 - - [09/Apr/2025 10:37:46] "POST /chat HTTP/1.1" 200 -
+2025-04-09 10:38:08,180 - INFO - 127.0.0.1 - - [09/Apr/2025 10:38:08] "OPTIONS /chat HTTP/1.1" 200 -
+2025-04-09 10:38:09,037 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-09 10:38:09,049 - INFO - 127.0.0.1 - - [09/Apr/2025 10:38:09] "POST /chat HTTP/1.1" 200 -
+2025-04-09 21:18:46,798 - INFO - LLM initialized successfully.
+2025-04-09 21:18:46,830 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.105:5000
+2025-04-09 21:18:46,830 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-09 21:22:35,336 - INFO - 192.168.1.105 - - [09/Apr/2025 21:22:35] "[33mGET / HTTP/1.1[0m" 404 -
+2025-04-09 21:22:35,417 - INFO - 192.168.1.105 - - [09/Apr/2025 21:22:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-09 21:24:26,324 - INFO - LLM initialized successfully.
+2025-04-09 21:24:26,338 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.105:5000
+2025-04-09 21:24:26,338 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-09 21:24:39,596 - INFO - 127.0.0.1 - - [09/Apr/2025 21:24:39] "GET /welcome HTTP/1.1" 200 -
+2025-04-09 21:24:52,324 - INFO - 127.0.0.1 - - [09/Apr/2025 21:24:52] "OPTIONS /chat HTTP/1.1" 200 -
+2025-04-09 21:24:53,109 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-09 21:24:53,149 - INFO - 127.0.0.1 - - [09/Apr/2025 21:24:53] "POST /chat HTTP/1.1" 200 -
+2025-04-09 21:25:08,933 - INFO - 127.0.0.1 - - [09/Apr/2025 21:25:08] "OPTIONS /chat HTTP/1.1" 200 -
+2025-04-09 21:25:09,799 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-09 21:25:09,806 - INFO - 127.0.0.1 - - [09/Apr/2025 21:25:09] "POST /chat HTTP/1.1" 200 -
+2025-04-09 21:25:55,156 - INFO - 127.0.0.1 - - [09/Apr/2025 21:25:55] "OPTIONS /chat HTTP/1.1" 200 -
+2025-04-09 21:25:55,943 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-09 21:25:55,966 - INFO - 127.0.0.1 - - [09/Apr/2025 21:25:55] "POST /chat HTTP/1.1" 200 -
+2025-04-09 21:26:08,088 - INFO - 127.0.0.1 - - [09/Apr/2025 21:26:08] "OPTIONS /chat HTTP/1.1" 200 -
+2025-04-09 21:26:08,910 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-09 21:26:08,918 - INFO - 127.0.0.1 - - [09/Apr/2025 21:26:08] "POST /chat HTTP/1.1" 200 -
+2025-04-09 21:26:49,431 - INFO - 127.0.0.1 - - [09/Apr/2025 21:26:49] "[33mOPTIONS /api/predict-risk HTTP/1.1[0m" 404 -
+2025-04-09 21:26:49,434 - INFO - 127.0.0.1 - - [09/Apr/2025 21:26:49] "[33mOPTIONS /api/get-risk-data HTTP/1.1[0m" 404 -
+2025-04-10 00:41:09,722 - INFO - LLM initialized successfully.
+2025-04-10 00:41:09,747 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.105:5000
+2025-04-10 00:41:09,748 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-10 00:42:27,039 - INFO - LLM initialized successfully.
+2025-04-10 00:42:27,053 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.105:5000
+2025-04-10 00:42:27,053 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-10 00:47:59,770 - INFO - LLM initialized successfully.
+2025-04-10 00:47:59,786 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.105:5000
+2025-04-10 00:47:59,786 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-10 00:48:08,296 - INFO - 127.0.0.1 - - [10/Apr/2025 00:48:08] "GET /welcome HTTP/1.1" 200 -
+2025-04-10 00:48:11,457 - INFO - 127.0.0.1 - - [10/Apr/2025 00:48:11] "GET /welcome HTTP/1.1" 200 -
+2025-04-10 00:48:40,501 - INFO - 127.0.0.1 - - [10/Apr/2025 00:48:40] "OPTIONS /chat HTTP/1.1" 200 -
+2025-04-10 00:48:41,605 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-10 00:48:41,658 - INFO - 127.0.0.1 - - [10/Apr/2025 00:48:41] "POST /chat HTTP/1.1" 200 -
+2025-04-10 00:48:47,389 - INFO - 127.0.0.1 - - [10/Apr/2025 00:48:47] "GET /welcome HTTP/1.1" 200 -
+2025-04-10 00:59:19,642 - INFO - LLM initialized successfully.
+2025-04-10 00:59:19,658 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.105:5000
+2025-04-10 00:59:19,658 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-10 00:59:29,368 - INFO - 127.0.0.1 - - [10/Apr/2025 00:59:29] "GET /welcome HTTP/1.1" 200 -
+2025-04-10 00:59:32,589 - INFO - 127.0.0.1 - - [10/Apr/2025 00:59:32] "GET /welcome HTTP/1.1" 200 -
+2025-04-10 01:01:38,617 - INFO - 127.0.0.1 - - [10/Apr/2025 01:01:38] "GET /welcome HTTP/1.1" 200 -
+2025-04-16 19:07:47,610 - INFO - LLM initialized successfully.
+2025-04-16 19:07:47,913 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.105:5000
+2025-04-16 19:07:47,914 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-16 19:11:49,153 - INFO - 127.0.0.1 - - [16/Apr/2025 19:11:49] "GET /welcome HTTP/1.1" 200 -
+2025-04-16 19:12:16,010 - INFO - 127.0.0.1 - - [16/Apr/2025 19:12:16] "OPTIONS /chat HTTP/1.1" 200 -
+2025-04-16 19:12:17,247 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-16 19:12:17,261 - INFO - 127.0.0.1 - - [16/Apr/2025 19:12:17] "POST /chat HTTP/1.1" 200 -
+2025-04-17 10:43:02,741 - INFO - LLM initialized successfully.
+2025-04-17 10:43:02,779 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.4.37:5000
+2025-04-17 10:43:02,779 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-17 10:48:59,830 - INFO - 127.0.0.1 - - [17/Apr/2025 10:48:59] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 10:49:11,625 - INFO - 127.0.0.1 - - [17/Apr/2025 10:49:11] "OPTIONS /chat HTTP/1.1" 200 -
+2025-04-17 10:49:16,936 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-17 10:49:16,937 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-17 10:49:16,988 - INFO - 127.0.0.1 - - [17/Apr/2025 10:49:16] "POST /chat HTTP/1.1" 200 -
+2025-04-17 10:49:17,065 - ERROR - Chat endpoint error
+Traceback (most recent call last):
+  File "C:\Users\Dell\Desktop\FinVision\chatbot.py", line 134, in chat
+    response = chat_chain.invoke(
+        {"user_input": user_input},
+        config={"configurable": {"session_id": session_id}}
+    )
+  File "C:\Users\Dell\AppData\Roaming\Python\Python313\site-packages\langchain_core\runnables\base.py", line 5440, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Dell\AppData\Roaming\Python\Python313\site-packages\langchain_core\runnables\base.py", line 5440, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Dell\AppData\Roaming\Python\Python313\site-packages\langchain_core\runnables\base.py", line 3047, in invoke
+    input = context.run(step.invoke, input, config)
+  File "C:\Users\Dell\AppData\Roaming\Python\Python313\site-packages\langchain_core\runnables\base.py", line 5440, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Dell\AppData\Roaming\Python\Python313\site-packages\langchain_core\runnables\base.py", line 4780, in invoke
+    return self._call_with_config(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        self._invoke,
+        ^^^^^^^^^^^^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Dell\AppData\Roaming\Python\Python313\site-packages\langchain_core\runnables\base.py", line 1933, in _call_with_config
+    context.run(
+    ~~~~~~~~~~~^
+        call_func_with_variable_args,  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ),
+    ^
+  File "C:\Users\Dell\AppData\Roaming\Python\Python313\site-packages\langchain_core\runnables\config.py", line 428, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\Dell\AppData\Roaming\Python\Python313\site-packages\langchain_core\runnables\base.py", line 4644, in _invoke
+    output = output.invoke(
+        input,
+    ...<4 lines>...
+        ),
+    )
+  File "C:\Users\Dell\AppData\Roaming\Python\Python313\site-packages\langchain_core\runnables\base.py", line 5440, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Dell\AppData\Roaming\Python\Python313\site-packages\langchain_core\runnables\base.py", line 3047, in invoke
+    input = context.run(step.invoke, input, config)
+  File "C:\Users\Dell\AppData\Roaming\Python\Python313\site-packages\langchain_core\language_models\chat_models.py", line 331, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).generations[0][0],
+    ^
+  File "C:\Users\Dell\AppData\Roaming\Python\Python313\site-packages\langchain_core\language_models\chat_models.py", line 894, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Dell\AppData\Roaming\Python\Python313\site-packages\langchain_core\language_models\chat_models.py", line 719, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Dell\AppData\Roaming\Python\Python313\site-packages\langchain_core\language_models\chat_models.py", line 960, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "C:\Users\Dell\AppData\Roaming\Python\Python313\site-packages\langchain_groq\chat_models.py", line 499, in _generate
+    return self._create_chat_result(response)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Dell\AppData\Roaming\Python\Python313\site-packages\langchain_groq\chat_models.py", line 627, in _create_chat_result
+    for res in response["choices"]:
+               ~~~~~~~~^^^^^^^^^^^
+KeyError: 'choices'
+2025-04-17 10:49:17,110 - INFO - 127.0.0.1 - - [17/Apr/2025 10:49:17] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -
+2025-04-17 10:49:31,704 - INFO - 127.0.0.1 - - [17/Apr/2025 10:49:31] "OPTIONS /chat HTTP/1.1" 200 -
+2025-04-17 10:49:34,950 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-17 10:49:34,962 - INFO - 127.0.0.1 - - [17/Apr/2025 10:49:34] "POST /chat HTTP/1.1" 200 -
+2025-04-17 10:50:14,749 - INFO - 127.0.0.1 - - [17/Apr/2025 10:50:14] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 10:50:28,924 - INFO - 127.0.0.1 - - [17/Apr/2025 10:50:28] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 10:50:41,423 - INFO - 127.0.0.1 - - [17/Apr/2025 10:50:41] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 10:50:43,928 - INFO - 127.0.0.1 - - [17/Apr/2025 10:50:43] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:28:30,222 - INFO - LLM initialized successfully.
+2025-04-17 13:28:30,245 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.4.37:5000
+2025-04-17 13:28:30,245 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-17 13:42:21,855 - INFO - LLM initialized successfully.
+2025-04-17 13:42:21,880 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.4.37:5000
+2025-04-17 13:42:21,881 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-17 13:43:44,510 - INFO - LLM initialized successfully.
+2025-04-17 13:43:44,526 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.4.37:5000
+2025-04-17 13:43:44,526 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-17 13:59:19,906 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:19] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:20,382 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:20] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:20,785 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:20] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:21,190 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:21] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:21,602 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:21] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:21,991 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:21] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:22,414 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:22] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:22,833 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:22] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:23,235 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:23] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:23,621 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:23] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:24,022 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:24] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:24,429 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:24] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:24,834 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:24] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:25,239 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:25] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:25,640 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:25] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:26,039 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:26] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:26,449 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:26] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:26,859 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:26] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:27,265 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:27] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:27,683 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:27] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:28,074 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:28] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:28,480 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:28] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:28,887 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:28] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:29,289 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:29] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:29,691 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:29] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:30,098 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:30] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:30,496 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:30] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:30,900 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:30] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:31,284 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:31] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:31,713 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:31] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:32,133 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:32] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:32,533 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:32] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:32,961 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:32] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:33,352 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:33] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:33,735 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:33] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:34,139 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:34] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:34,553 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:34] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:34,944 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:34] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:35,345 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:35] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:35,751 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:35] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:36,154 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:36] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:36,542 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:36] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:36,969 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:36] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:37,368 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:37] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:37,776 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:37] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:38,176 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:38] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:38,579 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:38] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:38,987 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:38] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:39,388 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:39] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:39,796 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:39] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:40,182 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:40] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:40,618 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:40] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:41,021 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:41] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:41,419 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:41] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:41,802 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:41] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:42,216 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:42] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:42,566 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:42] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:42,998 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:42] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:43,398 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:43] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:43,803 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:43] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:44,212 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:44] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:44,617 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:44] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:45,036 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:45] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:45,423 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:45] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:45,815 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:45] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:46,239 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:46] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:46,638 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:46] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:47,044 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:47] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:47,447 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:47] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:47,851 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:47] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:48,261 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:48] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:48,658 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:48] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:49,048 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:49] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:49,449 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:49] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:49,865 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:49] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:50,267 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:50] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:50,672 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:50] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:51,078 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:51] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:51,489 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:51] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:51,894 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:51] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:52,298 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:52] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:52,696 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:52] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:53,119 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:53] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:53,502 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:53] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:53,916 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:53] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:54,323 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:54] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:54,720 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:54] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:55,131 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:55] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:55,524 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:55] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:55,936 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:55] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:56,344 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:56] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:56,778 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:56] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:57,181 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:57] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:57,547 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:57] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:57,979 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:57] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:58,395 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:58] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:58,777 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:58] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:59,197 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:59] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 13:59:59,588 - INFO - 127.0.0.1 - - [17/Apr/2025 13:59:59] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 14:00:00,029 - INFO - 127.0.0.1 - - [17/Apr/2025 14:00:00] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 14:00:00,432 - INFO - 127.0.0.1 - - [17/Apr/2025 14:00:00] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 14:00:00,822 - INFO - 127.0.0.1 - - [17/Apr/2025 14:00:00] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 14:00:01,181 - INFO - 127.0.0.1 - - [17/Apr/2025 14:00:01] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 14:00:01,627 - INFO - 127.0.0.1 - - [17/Apr/2025 14:00:01] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 14:00:02,018 - INFO - 127.0.0.1 - - [17/Apr/2025 14:00:02] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 14:00:02,413 - INFO - 127.0.0.1 - - [17/Apr/2025 14:00:02] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 14:00:02,846 - INFO - 127.0.0.1 - - [17/Apr/2025 14:00:02] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 14:00:03,222 - INFO - 127.0.0.1 - - [17/Apr/2025 14:00:03] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 14:00:03,663 - INFO - 127.0.0.1 - - [17/Apr/2025 14:00:03] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 14:00:04,079 - INFO - 127.0.0.1 - - [17/Apr/2025 14:00:04] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 14:00:04,478 - INFO - 127.0.0.1 - - [17/Apr/2025 14:00:04] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 14:00:04,888 - INFO - 127.0.0.1 - - [17/Apr/2025 14:00:04] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 14:00:05,289 - INFO - 127.0.0.1 - - [17/Apr/2025 14:00:05] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 14:00:05,646 - INFO - 127.0.0.1 - - [17/Apr/2025 14:00:05] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 14:00:06,098 - INFO - 127.0.0.1 - - [17/Apr/2025 14:00:06] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 14:00:06,491 - INFO - 127.0.0.1 - - [17/Apr/2025 14:00:06] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 14:00:06,895 - INFO - 127.0.0.1 - - [17/Apr/2025 14:00:06] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 14:00:25,496 - INFO - LLM initialized successfully.
+2025-04-17 14:00:25,513 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.4.37:5000
+2025-04-17 14:00:25,513 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-17 14:00:26,451 - INFO - 127.0.0.1 - - [17/Apr/2025 14:00:26] "GET /welcome HTTP/1.1" 200 -
+2025-04-17 14:00:50,329 - INFO - 127.0.0.1 - - [17/Apr/2025 14:00:50] "OPTIONS /chat HTTP/1.1" 200 -
+2025-04-17 14:00:51,387 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-17 14:00:51,421 - INFO - 127.0.0.1 - - [17/Apr/2025 14:00:51] "POST /chat HTTP/1.1" 200 -

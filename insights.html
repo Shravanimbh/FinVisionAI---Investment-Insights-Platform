@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Insights</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f7fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #1e2a38;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+    }
+
+    nav {
+      background-color: #2c3e50;
+      padding: 0.8rem 2rem;
+    }
+
+    nav a {
+      color: white;
+      margin-right: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .container {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .form-section {
+      margin-bottom: 2rem;
+    }
+
+    label {
+      font-weight: 600;
+    }
+
+    select {
+      padding: 0.6rem;
+      width: 100%;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .insight-summary {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      flex: 1 1 280px;
+      background: linear-gradient(to right, #f0f4ff, #e6f0ff);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .card i {
+      font-size: 1.8rem;
+      color: #3498db;
+      margin-bottom: 1rem;
+    }
+
+    .tags {
+      margin-top: 1rem;
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: #dff0fc;
+      color: #2c3e50;
+      padding: 4px 10px;
+      margin: 2px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+    }
+
+    .footer-note {
+      margin-top: 2rem;
+      font-style: italic;
+      color: #555;
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 99;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    .modal-content {
+      background: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      margin: 8% auto;
+      padding: 2rem;
+      width: 80%;
+      max-width: 600px;
+      position: relative;
+      animation: fadeZoom 0.4s ease;
+      color: #1e2a38;
+    }
+
+    @keyframes fadeZoom {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .metrics span {
+      display: inline-block;
+      margin-right: 12px;
+      color: #2c3e50;
+      font-size: 0.92rem;
+      background: #eef4fa;
+      padding: 6px 10px;
+      border-radius: 10px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .modal-content {
+        width: 90%;
+        padding: 1.5rem;
+      }
+
+      .card {
+        padding: 1.2rem;
+      }
+
+      .card h3 {
+        font-size: 1rem;
+      }
+
+      .card i {
+        font-size: 1.4rem;
+      }
+    }
+
+    .confidence {
+      font-style: italic;
+      color: #6ee7b7;
+    }
+  </style>
+</head>
+<body>
+
+<header>Financial Insights Dashboard</header>
+<nav>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="insights.html">Insights</a>
+  <a href="chatbot.html">Ask AI</a>
+</nav>
+
+<div class="container">
+  <div class="form-section">
+    <label for="riskLevel">Select Risk Level:</label>
+    <select id="riskLevel">
+      <option value="low">Low Risk</option>
+      <option value="moderate">Moderate Risk</option>
+      <option value="high">High Risk</option>
+    </select>
+  </div>
+
+  <div id="loading-spinner" style="display:none; text-align: center;">
+    <img src="spinner.gif" alt="Loading..." style="width: 60px;">
+    <p>AI is analyzing your data...</p>
+  </div>
+
+  <div class="insight-summary" id="insightSummary"></div>
+
+  <div class="footer-note">
+    Tap on any card for more detailed financial insight.
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="insightModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()" style="position: absolute; top: 12px; right: 16px; font-size: 24px; cursor: pointer;">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDescription"></p>
+    <div class="metrics" id="modalMetrics"></div>
+  </div>
+</div>
+
+<script>
+  const fallbackSuggestions = {
+    low: [
+      {
+        title: "Government Bonds",
+        icon: "fa-shield-halved",
+        description: "Safe investments issued by the government, offering stable but low returns.",
+        tags: ["Low Risk", "2-5% Return", "Very Stable"],
+        metrics: ["Volatility: Low", "Tenure: 5-10 Years", "Liquidity: Medium"]
+      },
+      {
+        title: "Fixed Deposits",
+        icon: "fa-piggy-bank",
+        description: "Fixed returns over a specified period, ideal for conservative investors.",
+        tags: ["Secure", "Fixed Return", "Bank Backed"],
+        metrics: ["Interest: ~6%", "Lock-in: Optional", "Risk: Negligible"]
+      },
+      {
+        title: "Large Cap Funds",
+        icon: "fa-building-columns",
+        description: "Invest in top-performing large companies with consistent track records.",
+        tags: ["Low-Medium Risk", "Blue-Chip Stocks", "Steady Growth"],
+        metrics: ["5Y CAGR: 8%", "Expense Ratio: 1.2%", "Volatility: Medium"]
+      }
+    ],
+    moderate: [
+      {
+        title: "Balanced Mutual Funds",
+        icon: "fa-scale-balanced",
+        description: "Combines equity and debt instruments for balanced performance.",
+        tags: ["Equity + Debt", "Diversified", "Medium Risk"],
+        metrics: ["Equity: 60%", "Debt: 40%", "Returns: ~9%"]
+      },
+      {
+        title: "Index Funds",
+        icon: "fa-chart-line",
+        description: "Mimic market indices, offering broad exposure with low cost.",
+        tags: ["Passive", "Diversified", "Low Fees"],
+        metrics: ["Tracking Error: <0.5%", "Returns: Market Average", "Liquidity: High"]
+      },
+      {
+        title: "Corporate Bonds",
+        icon: "fa-briefcase",
+        description: "Issued by companies, offering higher returns than government bonds.",
+        tags: ["Fixed Income", "Moderate Risk", "Tax-Efficient"],
+        metrics: ["Interest: ~7.5%", "Tenure: 2-7 Years", "Rating: AAA to BBB"]
+      }
+    ],
+    high: [
+      {
+        title: "Equity Stocks",
+        icon: "fa-arrow-trend-up",
+        description: "Direct investments in individual company stocks, offering high potential growth.",
+        tags: ["High Risk", "High Reward", "Volatile"],
+        metrics: ["Avg Return: 12-15%", "P/E: Varies", "Liquidity: High"]
+      },
+      {
+        title: "Cryptocurrency",
+        icon: "fa-coins",
+        description: "Digital assets with high volatility and massive return potential.",
+        tags: ["Volatile", "24/7 Market", "Speculative"],
+        metrics: ["Return Range: -50% to +200%", "Security: Medium", "Utility: Growing"]
+      },
+      {
+        title: "Sectoral Funds",
+        icon: "fa-lightbulb",
+        description: "Focused funds targeting specific sectors like tech, pharma, or energy.",
+        tags: ["Focused", "Growth Potential", "Trend Based"],
+        metrics: ["Returns: Varies by Sector", "High Volatility", "Time Horizon: 5+ Years"]
+      }
+    ]
+  };
+
+  function showDetails(data) {
+    document.getElementById("modalTitle").textContent = data.title;
+    document.getElementById("modalDescription").textContent = data.description;
+    document.getElementById("modalMetrics").innerHTML = data.metrics.map(m => `<span>📌 ${m}</span>`).join(" ");
+    document.getElementById("insightModal").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("insightModal").style.display = "none";
+  }
+
+  function updateInsights(suggestionList) {
+    const container = document.getElementById("insightSummary");
+    container.innerHTML = "";
+
+    suggestionList.forEach((s) => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <i class="fas ${s.icon || 'fa-lightbulb'}"></i>
+        <h3>${s.title}</h3>
+        <p>${s.description}</p>
+        <div class="tags">${s.tags.map(t => `<span class="tag">${t}</span>`).join(" ")}</div>
+      `;
+      card.addEventListener("click", () => showDetails(s));
+      container.appendChild(card);
+    });
+  }
+
+  document.getElementById("riskLevel").addEventListener("change", (e) => {
+    const selected = e.target.value;
+    updateInsights(fallbackSuggestions[selected]);
+  });
+
+  // Load default suggestions on page load
+  window.onload = () => {
+    const defaultRisk = document.getElementById("riskLevel").value;
+    updateInsights(fallbackSuggestions[defaultRisk]);
+  };
+</script>
+</body>
+</html>

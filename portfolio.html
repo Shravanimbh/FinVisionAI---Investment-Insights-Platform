@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart Portfolio Breakdown</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f8fb;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* NAVBAR STYLING */
+    nav {
+      background-color: #1e293b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+    }
+
+    .logo {
+      font-size: 22px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #60a5fa;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #93c5fd;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 30px 50px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 32px;
+      color: #1f2937;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 20px;
+    }
+
+    .upload-box {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      max-width: 600px;
+      width: 90%;
+    }
+
+    .upload-box input[type="file"] {
+      padding: 10px 20px;
+      border: 2px dashed #60a5fa;
+      border-radius: 10px;
+      cursor: pointer;
+      background-color: #eff6ff;
+      color: #1d4ed8;
+      font-weight: bold;
+      font-size: 16px;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .upload-box input[type="file"]:hover {
+      background-color: #dbeafe;
+    }
+
+    .chart-container {
+      margin-top: 50px;
+      background-color: #ffffff;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      width: 95%;
+    }
+
+    .summary {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 25px;
+      text-align: center;
+      gap: 20px;
+    }
+
+    .summary-card {
+      background: #f1f5f9;
+      padding: 20px;
+      border-radius: 12px;
+      flex: 1;
+      box-shadow: inset 0 0 5px #e2e8f0;
+    }
+
+    .summary-card h3 {
+      margin: 0;
+      font-size: 20px;
+      color: #1e3a8a;
+    }
+
+    .summary-card p {
+      font-size: 18px;
+      margin-top: 5px;
+      font-weight: bold;
+    }
+
+    canvas {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NEW NAVBAR START -->
+  <nav>
+    <div class="logo">FinVisionAI</div>
+    <div class="nav-links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="insights.html">Insights</a>
+      <a href="chatbot.html">Ask AI</a>
+    </div>
+  </nav>
+  <!-- NEW NAVBAR END -->
+
+  <header>
+    <h1>Smart Portfolio Breakdown</h1>
+  </header>
+
+  <main>
+    <div class="upload-box">
+      <h2>Upload Your Investment Portfolio (.pdf)</h2>
+      <input type="file" id="uploadFile" accept="application/pdf" />
+    </div>
+
+    <div class="summary" id="summaryBox" style="display: none;">
+      <div class="summary-card">
+        <h3>Total Investment</h3>
+        <p>₹52 Lakh</p>
+      </div>
+      <div class="summary-card">
+        <h3>Top Holding</h3>
+        <p>TSLA - ₹14L</p>
+      </div>
+      <div class="summary-card">
+        <h3>Least Holding</h3>
+        <p>AMZN - ₹7L</p>
+      </div>
+    </div>
+
+    <div class="chart-container" id="chartCard" style="display: none;">
+      <canvas id="portfolioChart" height="200"></canvas>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const uploadFile = document.getElementById("uploadFile");
+    const chartCard = document.getElementById("chartCard");
+    const summaryBox = document.getElementById("summaryBox");
+
+    uploadFile.addEventListener("change", function () {
+      const file = this.files[0];
+      if (file && file.type === "application/pdf") {
+        alert("PDF Uploaded Successfully! Generating Chart...");
+        chartCard.style.display = "block";
+        summaryBox.style.display = "flex";
+
+        const ctx = document.getElementById("portfolioChart").getContext("2d");
+        const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient.addColorStop(0, "#3b82f6");
+        gradient.addColorStop(1, "#93c5fd");
+
+        new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: ["AAPL", "GOOGL", "TSLA", "AMZN", "MSFT"],
+            datasets: [{
+              label: "Investment (₹ Lakhs)",
+              data: [12, 9, 14, 7, 10],
+              backgroundColor: [
+                "#93c5fd", "#fcd34d", "#6ee7b7", "#fca5a5", "#d8b4fe"
+              ],
+              borderRadius: 10,
+              barThickness: 45
+            }]
+          },
+          options: {
+            plugins: {
+              legend: {
+                display: false
+              },
+              tooltip: {
+                callbacks: {
+                  label: function (context) {
+                    return `₹ ${context.parsed.y} Lakh`;
+                  }
+                }
+              },
+              title: {
+                display: true,
+                text: 'Stock-Based Portfolio Breakdown',
+                font: {
+                  size: 20
+                },
+                color: '#1e293b'
+              }
+            },
+            scales: {
+              x: {
+                ticks: { color: '#334155', font: { weight: 'bold' } },
+                grid: { display: false }
+              },
+              y: {
+                beginAtZero: true,
+                ticks: { color: '#334155' },
+                title: {
+                  display: true,
+                  text: 'Investment in ₹ Lakhs',
+                  color: '#475569',
+                  font: {
+                    size: 14,
+                    weight: 'bold'
+                  }
+                }
+              }
+            }
+          }
+        });
+      } else {
+        alert("Please upload a valid PDF file.");
+        chartCard.style.display = "none";
+        summaryBox.style.display = "none";
+      }
+    });
+  </script>
+
+</body>
+</html>
